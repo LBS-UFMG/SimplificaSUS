@@ -6,8 +6,14 @@ import xml.etree.ElementTree as ET
 
 # rg = int(sys.argv[1])
 
-# pubmed &api_key=
-api_pubmed = "ba82b583b780a470bbf365c882ac1e5ac108"
+# o código a seguir lê o arquivo .env (privado)
+# e pega a chave de api do pubmed
+env = open('../../.env').readlines()
+for linha in env:
+  i = linha.split('=')
+  if i[0] == 'api_pubmed':
+    api_pubmed = i[1].strip().replace('"','')
+
 
 # INPUT: título do artigo
 # OUTPUT (desejado): abstract
