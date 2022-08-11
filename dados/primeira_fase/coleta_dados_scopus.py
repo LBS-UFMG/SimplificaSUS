@@ -14,6 +14,8 @@ for linha in env:
   if i[0] == 'api_pubmed':
     api_pubmed = i[1].strip().replace('"','')
 
+# o mesmo código feito com 1 linha
+#api_pubmed2 = [i.strip().split('=')[1].replace('"','') for i in open('../../.env').readlines() if i.strip().split('=')[0]=='api_pubmed'][0]
 
 # INPUT: título do artigo
 # OUTPUT (desejado): abstract
