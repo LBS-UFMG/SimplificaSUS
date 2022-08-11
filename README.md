@@ -1,6 +1,6 @@
 # SimplificaSUS
 
-**Sobre os subdiretórios:**
+**Subdiretórios:**
 - **web**: armazena o código fonte da aplicação Laravel que executa a interface do Painel SimplificaSUS.
 - **dados**: diretório que armazena as bases de dados utilizadas.
 
