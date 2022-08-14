@@ -1,0 +1,70 @@
+/* 
+Cores: 
+#4BD2CC VERDE CLARO
+#00778B VERDE ESCURO
+#00305A AZUL ESCURO
+#C5D8E0 AZUL CLARO 
+*/
+/* Criando variáveis */
+:root {  
+    --azul-escuro: #00305A;
+    --azul-claro: #C5D8E0;
+    --verde-escuro: #00778B;
+    --verde-claro: #4BD2CC;
+}
+
+a{ color: var(--azul-escuro); text-decoration: none; font-weight: bold; }
+a:hover{ color: var(--verde-escuro); text-decoration: underline; }
+
+.bg-verde-claro{ background: var(--verde-claro); }
+.bg-azul-claro{ background: var(--azul-claro); }
+.bg-verde-escuro{ background: var(--verde-escuro); }
+.bg-azul-escuro{ background: var(--azul-escuro); }
+
+.border-verde-claro{ border-left:5px solid var(--verde-claro); }
+.border-azul-claro{ border-left:5px solid var(--azul-claro); }
+.border-verde-escuro{ border-left:5px solid var(--verde-escuro); }
+.border-azul-escuro{ border-left:5px solid var(--azul-escuro); }
+
+.text-verde-claro{ color: var(--verde-claro); }
+.text-azul-claro{ color: var(--azul-claro); }
+.text-verde-escuro{ color: var(--verde-escuro); }
+.text-azul-escuro{ color: var(--azul-escuro); }
+
+.nav-link{ color: var(--azul-escuro); }
+
+.product-device {
+    position: absolute;
+    right: 10%;
+    bottom: -30%;
+    width: 300px;
+    height: 540px;
+    background-color: var(--azul-escuro);
+    border-radius: 21px;
+    transform: rotate(30deg);
+}
+
+.product-device-2 {
+    top: -25%;
+    right: auto;
+    bottom: 0;
+    left: 5%;
+    background-color: var(--azul-claro);
+}
+.nav-link{
+    font-weight: bold;
+}
+.nav-link:hover{
+    color:#4BD2CC;
+    font-weight: bold;
+}
+/* .product-device::before {
+    position: absolute;
+    top: 10%;
+    right: 10px;
+    bottom: 10%;
+    left: 10px;
+    content: "";
+    background-color: rgba(255, 255, 255, .1);
+    border-radius: 5px;
+} */
