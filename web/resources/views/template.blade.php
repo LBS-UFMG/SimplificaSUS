@@ -52,27 +52,54 @@
               </a>
               <ul class="dropdown-menu" style="position:absolute">
               <li><a class="dropdown-item" href="{{ url('/') }}">CoViD-19</a></li>
-                <li><a class="dropdown-item" href="{{ url('/vm') }}">Monkeypox</a></li>
-                <li><a class="dropdown-item" href="{{ url('/febreamarela') }}">Febrea amarela</a></li>
-                <li><a class="dropdown-item" href="{{ url('/dengue') }}">Dengue</a></li>
-                <li><a class="dropdown-item" href="{{ url('/zika') }}">Zika</a></li>
+                <li><a class="dropdown-item disabled" href="{{ url('/vm') }}" >Monkeypox</a></li>
+                <li><a class="dropdown-item disabled" href="{{ url('/febreamarela') }}">Febrea amarela</a></li>
+                <li><a class="dropdown-item disabled" href="{{ url('/dengue') }}">Dengue</a></li>
+                <li><a class="dropdown-item disabled" href="{{ url('/zika') }}">Zika</a></li>
               </ul>
             </li>
 
-            <li class="nav-item dropdown me-4"><a class="nav-link" href="#">Detalhes</a></li>
+            <li class="nav-item dropdown me-4"><a class="nav-link" href="#detalhes">Detalhes</a></li>
 
-            <li class="nav-item dropdown me-4"><a class="nav-link" href="#">Artigos</a></li>
+            <li class="nav-item dropdown me-4"><a class="nav-link" href="#artigos">Artigos</a></li>
 
-            <li class="nav-item dropdown me-4"><a class="nav-link" href="#">Estatísticas</a></li>
+            <li class="nav-item dropdown me-4"><a class="nav-link" href="#estatisticas">Estatísticas</a></li>
 
-            <li class="nav-item dropdown me-4"><a class="nav-link" href="#">Análise PLN</a></li>
+            <li class="nav-item dropdown me-4"><a class="nav-link" href="#pln">Análise PLN</a></li>
 
-            <li class="nav-item dropdown me-4"><a class="nav-link" href="#">Sobre</a></li>
+            <li class="nav-item dropdown me-4"><a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#sobre">Sobre</a></li>
             <!-- FIM menu seleção página - lado direito -->
           </ul>
         </div> <!-- fim colapso -->
       </div><!-- fim container -->
     </nav>
+
+    <!-- Modal -->
+    <div class="modal fade" id="sobre" tabindex="-1">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Sobre</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body small">
+            <p class="text-center">
+              <img src="{{ url('/img/logo/logo_v_color_1.svg') }}">
+            </p>
+            <p class="text-muted m-1"><strong>Projeto SimplificaSUS</strong></p>
+            <p class="text-muted m-1"><strong>Autores:</strong> Diego Mariano, Frederico Chaves, Marcos Matos</p>
+            <p class="text-muted m-1"><strong>Versão:</strong> 0.2.1 beta (agosto, 2022)</p>
+            
+            <p class="text-muted m-1 mt-3"><strong>Logo:</strong> Adaptado de <em><a class="text-muted" href="https://www.freepik.com/vectors/s-logo">S logo vector created by freepik - www.freepik.com</a></em></p>
+            <p class="text-muted m-1"><strong>Apoio:</strong> Laboratório de Bioinformática e Sistemas - Universidade Federal de Minas Gerais</p>
+            
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </header>
   <!-- FIM HEADER -->
   
