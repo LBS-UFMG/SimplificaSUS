@@ -1,5 +1,5 @@
 # SimplificaSUS
-<img src="logo_h_color_1.svg">
+<img src="dados/logo_h_color_1.svg">
 
 **Subdiretórios:**
 - **web**: armazena o código fonte da aplicação Laravel que executa a interface do Painel SimplificaSUS.
