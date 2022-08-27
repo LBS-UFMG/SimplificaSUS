@@ -6,7 +6,7 @@ $(()=>{
         colunas: ["titulo", "link",	"data",	"tipo",	"issn",	"journal_name",	"qualis",	"fator_impacto_jrc",	"hindex",	"media_citacao_3_anos",	"abstract",	"categorias"],
         onde: '#minha_tabela',
         tabela: $().DataTable(),
-        arquivos: ['artigos_atualizado_2.csv'],
+        arquivos: ['dados/dados/dados_brutos/covid_ouro.csv'],
         arquivo_atual: 0
     }
 

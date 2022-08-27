@@ -3,6 +3,10 @@
 **Autores:** Frederico Carvalho, Diego Mariano, Marcos Matos
 **Protótipo:** Disponível em: <a href="http://inovasus.alfahelix.com.br/">http://inovasus.alfahelix.com.br/</a>.
 
+# O que é?
+SimplificaSUS é um painel interativo que condensa dados obtidos da literatura científica sobre determinada doença. Os dados exibidos no SimplificaSUS são obtidos da base de dados PubMed disponível na API pública do NCBI (National Center for Biotechnology Information ou "Centro Nacional de Informações sobre Biotecnologia" - EUA). O SimplificaSUS também é inspirado no Painel de Evidências Científicas sobre Tratamento Farmacológico e Vacinas - COVID-19 do Ministério da Saúde (Brasil).
+
+
 # Subdiretórios:
 - **web**: armazena o código fonte da aplicação Laravel que executa a interface do Painel SimplificaSUS.
 - **dados**: diretório que armazena as bases de dados utilizadas.
