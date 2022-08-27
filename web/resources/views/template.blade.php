@@ -17,6 +17,7 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <link href="{{ url('/css/style.css') }}" rel="stylesheet">
   <!-- <link href="{{ url('/css/dashboard.css') }}" rel="stylesheet"> -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
 
   <link rel="icon" href="{{ url('/img/favicon.png') }}">
 </head>

@@ -415,7 +415,16 @@ const grafico15 = new Chart(onde15, {
     })
 
 
-    // gráfico 8 - ---------------------------------------
+// gráfico 9 - PLN ----------------------------------------
+const dados_g9 = d3.csv('./dados/dados_graficos/covid_ouro/g9.csv')
+
+dados_g9.then(
+  (dados)=>{
+    console.log(dados)
+  }
+);
+
+
 const onde8 = document.getElementById('g8')
 const grafico8 = new Chart(onde8, {
   type: 'horizontalBar',
