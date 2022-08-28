@@ -573,11 +573,13 @@ const grafico9_cr = new Chart(onde9_cr, {
 
 // clinical trial
 
-const g9_ct_labels = ['hydroxychloroquine','vaccine','tocilizumab','remdesivir','chloroquine','azithromycin','oxygen','ribavirin','methylprednisolone','anakinra','famotidine','dexamethasone','ivermectin','prednisolone','lopinavir','heparin','nitazoxanide','baricitinib','atazanavir','kaletra','colchicine','calcium','ritonavir','doxycycline','meropenem','tacrolimus','cyclosporine','sarilumab','siltuximab','rituximab','fingolimod','zosyn','linezolid','bactrim','canakinumab','dexmedetomidine','etanercept','adalimumab','infliximab','ustekinumab','today','eculizumab','darunavir','cholecalciferol','rivaroxaban','acitretin','metformin','oseltamivir','methotrexate','ruxolitinib'];
+const g9_ct_labels = ['hydroxychloroquine','vaccine','remdesivir','chloroquine','tocilizumab','azithromycin','ribavirin','oxygen','lopinavir','methylprednisolone','anakinra','sarilumab','baricitinib','oseltamivir','today']
 
-const g9_ct_pos = [62,37,35,22,21,19,16,7,6,6,5,5,5,4,4,4,3,3,2,2,2,2,2,2,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+const g9_ct_pos = [15,13,12,7,4,3,2,2,1,1,1,1,0,0,0];
+  
+  
 
-const g9_ct_neg = [113,40,60,27,37,38,28,4,11,11,2,7,8,2,7,10,0,2,0,0,2,4,7,7,2,2,5,6,2,2,2,2,2,2,2,2,2,2,2,2,3,3,3,4,4,4,5,5,5,8];
+const g9_ct_neg = [14,9,5,12,11,3,1,2,2,3,3,5,2,2,3];
 
 const onde9_ct = document.getElementById('g9_ct')
 const grafico9_ct = new Chart(onde9_ct, {
