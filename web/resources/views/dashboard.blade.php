@@ -98,7 +98,7 @@
 <div class="container-fluid mt-5 rounded bg-light">
   <div id="detalhes" class="p-5">
     <h1 class="display-5 fw-bold text-verde-escuro mb-4">O que é o SimplificaSUS?</h1>
-    <p class="col-md-12 fs-4">SimplificaSUS é um painel interativo que condensa dados obtidos da literatura científica sobre determinada doença. Os dados exibidos no SimplificaSUS são obtidos da base de dados PubMed disponível na API pública do NCBI (<em>National Center for Biotechnology Information</em> ou "Centro Nacional de Informações sobre Biotecnologia" - EUA). O SimplificaSUS também é inspirado no <a href="https://infoms.saude.gov.br/extensions/evidencias_covid/evidencias_covid.html" target="_blank">Painel de Evidências Científicas sobre Tratamento Farmacológico e Vacinas - COVID-19</a> do Ministério da Saúde (Brasil).<br><br>
+    <p class="col-md-12 fs-4">SimplificaSUS é um painel interativo que condensa dados da literatura científica sobre determinada doença. Os dados exibidos no SimplificaSUS são obtidos da base de dados PubMed disponível na API pública do NCBI (<em>National Center for Biotechnology Information</em> ou "Centro Nacional de Informações sobre Biotecnologia" - EUA). O SimplificaSUS também é inspirado no <a href="https://infoms.saude.gov.br/extensions/evidencias_covid/evidencias_covid.html" target="_blank">Painel de Evidências Científicas sobre Tratamento Farmacológico e Vacinas - COVID-19</a> do Ministério da Saúde (Brasil).<br><br>
       Atualmente, o SimplificaSUS fornece, ou prevê fornecer em breve, informações da literatura para as seguintes enfermidades:<br></p>
 
     <p>
