@@ -577,8 +577,6 @@ const g9_ct_labels = ['hydroxychloroquine','vaccine','remdesivir','chloroquine',
 
 const g9_ct_pos = [15,13,12,7,4,3,2,2,1,1,1,1,0,0,0];
   
-  
-
 const g9_ct_neg = [14,9,5,12,11,3,1,2,2,3,3,5,2,2,3];
 
 const onde9_ct = document.getElementById('g9_ct')
