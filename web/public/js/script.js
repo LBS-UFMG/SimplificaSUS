@@ -36,6 +36,9 @@ $(()=>{
             "data": dados,
             "columns": 
             colunas,
+            language: {
+                url:"js/pt_br.json"
+            },
             "columnDefs": [
                 { "width": "40%", "targets": 0 },
                 { "width": "20%", "targets": 1 },
@@ -188,6 +191,14 @@ $(()=>{
         })
         // FIM Exibe o resumo em um modal
 
+        
+    const eventosClique = ()=>{
+        $('#A1').click(function(){ 
+            $('input').val('A1').focus();
+            t.search('A1').draw();
+        });
+    }
+
     // iniciar
     const iniciar = ()=>{
 
@@ -204,7 +215,11 @@ $(()=>{
             carregarArquivo()
         })
 
+        // clique
+        eventosClique();
+
     }
+
 
     // executa
     iniciar()

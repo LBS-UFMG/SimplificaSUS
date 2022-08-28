@@ -1,4 +1,10 @@
-/* globals Chart:false, feather:false */
+/* 
+  Este script é responsável por renderizar os gráficos exibidos na página inicial do dashboard. 
+  Ele utiliza chart.js 
+
+  // globals Chart:false, feather:false
+
+*/
 
 const cor1 = '#1e90ff';
 const cor2 = '#ffa500';
@@ -428,14 +434,14 @@ const grafico15 = new Chart(onde15, {
 //   }
 // );
 
-const g9_labels = ['dexamethasone','vaccine','methylprednisolone','oxygen','ribavirin','tocilizumab','hydroxychloroquine','chloroquine','heparin','carfilzomib','zanamivir','indinavir','saquinavir','remdesivir','lopinavir','ritonavir','atazanavir','emetine','azithromycin','baricitinib','thalidomide','nitazoxanide','budesonide','albuterol','thiamine','epoprostenol','pentoxifylline','ivermectin','aspirin','kaletra','sitagliptin','famotidine','canrenone','bromhexine','l-glutamine','cetirizine','sofosbuvir','daclatasvir','argatroban','doxycycline','calcium','ocrelizumab','anakinra','lipase','meropenem','dipyridamole','colchicine','belatacept','prednisolone','naproxen','cyclosporine','nafamostat','sarilumab','nifedipine','amlodipine','aldosterone','ciclesonide','lidocaine','tacrolimus','cholecalciferol','clozapine','boceprevir','auranofin','didanosine','today','metformin','furosemide','oseltamivir','apixaban','alemtuzumab','siltuximab','nivolumab','ipilimumab','pembrolizumab','rituximab','memantine','fingolimod','warfarin','ruxolitinib','azathioprine','eculizumab','methotrexate','valrubicin','elbasvir','streptomycin','riboflavin','praziquantel','fluvoxamine','fondaparinux','histamine','hydrocortisone','zosyn','linezolid','bactrim','ganciclovir','darunavir','canakinumab','fedratinib','rivaroxaban','febuxostat','leflunomide','propofol','dexmedetomidine','ibuprofen','paracetamol','acitretin','etanercept','adalimumab','infliximab','ustekinumab','empagliflozin','telmisartan','linagliptin','ouabain'];
+const g9_labels = ['hydroxychloroquine','vaccine','tocilizumab','remdesivir','chloroquine','azithromycin','oxygen','ribavirin','methylprednisolone','anakinra','famotidine','dexamethasone','ivermectin','prednisolone','lopinavir','heparin','nitazoxanide','baricitinib','atazanavir','kaletra','colchicine','calcium','ritonavir','doxycycline','meropenem','tacrolimus','cyclosporine','sarilumab','siltuximab','rituximab','fingolimod','zosyn','linezolid','bactrim','canakinumab','dexmedetomidine','etanercept','adalimumab','infliximab','ustekinumab','today','eculizumab','darunavir','cholecalciferol','rivaroxaban','acitretin','metformin','oseltamivir','methotrexate','ruxolitinib'];
 
-const g9_pos = [5,37,6,16,7,35,62,21,4,1,1,1,1,22,4,2,2,1,19,3,1,3,1,1,1,1,1,5,1,2,1,5,1,1,1,1,1,1,1,2,2,1,6,1,1,1,2,1,4,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+const g9_pos = [62,37,35,22,21,19,16,7,6,6,5,5,5,4,4,4,3,3,2,2,2,2,2,2,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 
-const g9_neg = [7,40,11,28,4,60,113,37,10,0,0,0,0,27,7,7,0,0,38,2,1,0,0,1,0,0,0,8,0,0,0,2,0,0,0,0,1,1,1,7,4,1,11,0,2,1,2,0,2,0,5,1,6,0,0,0,1,0,2,4,1,1,1,1,3,5,1,5,1,1,2,1,1,1,2,1,2,1,8,1,3,5,1,1,1,1,1,1,1,1,1,2,2,2,1,3,2,1,4,1,1,1,2,1,1,4,2,2,2,2,1,1,1,1];
+const g9_neg = [113,40,60,27,37,38,28,4,11,11,2,7,8,2,7,10,0,2,0,0,2,4,7,7,2,2,5,6,2,2,2,2,2,2,2,2,2,2,2,2,3,3,3,4,4,4,5,5,5,8];
 
-const onde8 = document.getElementById('g8')
-const grafico8 = new Chart(onde8, {
+const onde9 = document.getElementById('g9')
+const grafico9 = new Chart(onde9, {
   type: 'horizontalBar',
   data: {
     labels: 
@@ -473,7 +479,161 @@ const grafico8 = new Chart(onde8, {
 })
 
 
+// revisao sistematica
+const g9_sr_labels = ['hydroxychloroquine','chloroquine','ivermectin','remdesivir', 'tocilizumab'];
+  
+const g9_sr_pos = [5,3,2,1,0];
 
+const g9_sr_neg = [10,2,0,5,7];
+
+const onde9_sr = document.getElementById('g9_sr')
+const grafico9_sr = new Chart(onde9_sr, {
+  type: 'horizontalBar',
+  data: {
+    labels: 
+    g9_sr_labels
+    ,
+    datasets: [{
+      stack: "Stack 0",
+      data: 
+      g9_sr_pos,
+      backgroundColor: cor1
+    },
+    {
+      stack: "Stack 0",  data:
+      g9_sr_neg
+        .map(i=>-i), backgroundColor: cor3
+    }
+  ]
+  },
+  options: { scales: { x:{ max: 12, min: -12 } }, legend: { display: false }
+  }
+})
+
+// meta analise
+const g9_ma_labels = ['tocilizumab','prednisolone','chloroquine'];
+const g9_ma_pos = [ 2,2,0 ];
+const g9_ma_neg = [0,0,2];
+
+const onde9_ma = document.getElementById('g9_ma')
+const grafico9_ma = new Chart(onde9_ma, {
+  type: 'horizontalBar',
+  data: {
+    labels: 
+    g9_ma_labels
+    ,
+    datasets: [{
+      stack: "Stack 0",
+      data: 
+      g9_ma_pos,
+      backgroundColor: cor1
+    },
+    {
+      stack: "Stack 0",  data:
+      g9_ma_neg
+        .map(i=>-i), backgroundColor: cor3
+    }
+  ]
+  },
+  options: { scales: { x:{ max: 12, min: -12 } }, legend: { display: false }
+  }
+})
+
+
+// case report
+const g9_cr_labels = ['tocilizumab','hydroxychloroquine','oxygen','remdesivir','azithromycin']
+
+const g9_cr_pos = [  3,3,3,2,0 ];
+
+const g9_cr_neg = [2,3,3,3,3];
+
+const onde9_cr = document.getElementById('g9_cr')
+const grafico9_cr = new Chart(onde9_cr, {
+  type: 'horizontalBar',
+  data: {
+    labels: 
+    g9_cr_labels
+    ,
+    datasets: [{
+      stack: "Stack 0",
+      data: 
+      g9_cr_pos,
+      backgroundColor: cor1
+    },
+    {
+      stack: "Stack 0",  data:
+      g9_cr_neg
+        .map(i=>-i), backgroundColor: cor3
+    }
+  ]
+  },
+  options: { scales: { x:{ max: 12, min: -12 } }, legend: { display: false }
+  }
+})
+
+// clinical trial
+
+const g9_ct_labels = ['hydroxychloroquine','vaccine','tocilizumab','remdesivir','chloroquine','azithromycin','oxygen','ribavirin','methylprednisolone','anakinra','famotidine','dexamethasone','ivermectin','prednisolone','lopinavir','heparin','nitazoxanide','baricitinib','atazanavir','kaletra','colchicine','calcium','ritonavir','doxycycline','meropenem','tacrolimus','cyclosporine','sarilumab','siltuximab','rituximab','fingolimod','zosyn','linezolid','bactrim','canakinumab','dexmedetomidine','etanercept','adalimumab','infliximab','ustekinumab','today','eculizumab','darunavir','cholecalciferol','rivaroxaban','acitretin','metformin','oseltamivir','methotrexate','ruxolitinib'];
+
+const g9_ct_pos = [62,37,35,22,21,19,16,7,6,6,5,5,5,4,4,4,3,3,2,2,2,2,2,2,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+
+const g9_ct_neg = [113,40,60,27,37,38,28,4,11,11,2,7,8,2,7,10,0,2,0,0,2,4,7,7,2,2,5,6,2,2,2,2,2,2,2,2,2,2,2,2,3,3,3,4,4,4,5,5,5,8];
+
+const onde9_ct = document.getElementById('g9_ct')
+const grafico9_ct = new Chart(onde9_ct, {
+  type: 'horizontalBar',
+  data: {
+    labels: 
+    g9_ct_labels
+    ,
+    datasets: [{
+      stack: "Stack 0",
+      data: 
+      g9_ct_pos,
+      backgroundColor: cor1
+    },
+    {
+      stack: "Stack 0",  data:
+      g9_ct_neg
+        .map(i=>-i), backgroundColor: cor3
+    }
+  ]
+  },
+  options: { scales: { x:{ max: 12, min: -12 } }, legend: { display: false }
+  }
+})
+
+
+// coorte
+const g9_co_labels = ['tocilizumab','hydroxychloroquine','methylprednisolone','oxygen','vaccine','azithromycin','heparin','cholecalciferol','anakinra'];
+
+const g9_co_pos = [9,3,1,1,1,1,0,0,0];
+  
+const g9_co_neg = [16,15,2,2,3,5,2,3,4];
+
+const onde9_co = document.getElementById('g9_co')
+const grafico9_co = new Chart(onde9_co, {
+  type: 'horizontalBar',
+  data: {
+    labels: 
+    g9_co_labels
+    ,
+    datasets: [{
+      stack: "Stack 0",
+      data: 
+      g9_co_pos,
+      backgroundColor: cor1
+    },
+    {
+      stack: "Stack 0",  data:
+      g9_co_neg
+        .map(i=>-i), backgroundColor: cor3
+    }
+  ]
+  },
+  options: { scales: { x:{ max: 12, min: -12 } }, legend: { display: false }
+  }
+})
 
 
 })() // fim

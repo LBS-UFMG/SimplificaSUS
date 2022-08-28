@@ -23,8 +23,10 @@
       <div class="card-body">
         <div class="row">
           <div class="col-md-6 col-12 text-center">
-            <h5 class="card-title display-4 text-azul-escuro"><i class="bi bi-file-earmark-text-fill"></i></h5>
-            <h6 class="card-subtitle mb-2 text-azul-escuro"><b>Artigos</b></h6>
+            <a href="#artigos">
+              <h5 class="card-title display-4 text-azul-escuro"><i class="bi bi-file-earmark-text-fill"></i></h5>
+              <h6 class="card-subtitle mb-2 text-azul-escuro"><b>Artigos</b></h6>
+            </a>
           </div>
           <div class="col-md-6 col-12">
             <p class="display-5 pt-3">2147</p>
@@ -40,8 +42,10 @@
       <div class="card-body">
         <div class="row">
           <div class="col-md-6 col-12 text-center">
-            <h5 class="card-title display-4 text-verde-escuro"><i class="bi bi-award-fill"></i></h5>
-            <h6 class="card-subtitle mb-2 text-verde-escuro"><b>Qualis A</b></h6>
+            <a href="#artigos" id="A1">
+              <h5 class="card-title display-4 text-verde-escuro"><i class="bi bi-award-fill"></i></h5>
+              <h6 class="card-subtitle mb-2 text-verde-escuro"><b>Qualis A</b></h6>
+            </a>
           </div>
           <div class="col-md-6 col-12">
             <p class="display-5 pt-3">652</p>
@@ -57,8 +61,10 @@
       <div class="card-body">
         <div class="row">
           <div class="col-md-6 col-12 text-center">
-            <h5 class="card-title display-4 text-verde-claro"><i class="bi bi-slash-circle-fill"></i></h5>
-            <h6 class="card-subtitle mb-2 text-verde-claro"><b>Tecnologias</b></h6>
+            <a href="#estatisticas">
+              <h5 class="card-title display-4 text-verde-claro"><i class="bi bi-slash-circle-fill"></i></h5>
+              <h6 class="card-subtitle mb-2 text-verde-claro"><b>Tecnologias</b></h6>
+            </a>
           </div>
           <div class="col-md-6 col-12">
             <p class="display-5 pt-3">564</p>
@@ -74,8 +80,10 @@
       <div class="card-body">
         <div class="row">
           <div class="col-md-6 col-12 text-center">
-            <h5 class="card-title display-4 text-azul-claro" title="PLN: Processamento de Linguagem Natural"><i class="bi bi-chat-square-quote-fill"></i></h5>
-            <h6 class="card-subtitle mb-2 text-azul-claro" title="PLN: Processamento de Linguagem Natural"><b>PLN</b></h6>
+            <a href="#pln">
+              <h5 class="card-title display-4 text-azul-claro" title="PLN: Processamento de Linguagem Natural"><i class="bi bi-chat-square-quote-fill"></i></h5>
+              <h6 class="card-subtitle mb-2 text-azul-claro" title="PLN: Processamento de Linguagem Natural"><b>PLN</b></h6>
+            </a>
           </div>
           <div class="col-md-6 col-12">
             <p class="display-5 pt-3">496</p>
@@ -246,17 +254,102 @@
 </div>
 <div class="my-5" id="pln">
 
-  <!-- grafico -->
   <div class="col-12 my-2">
     <h3 class="mb-2 ps-2 text-muted"><label class="badge bg-azul-escuro me-2">PLN</label>Análise do processamento de linguagem natural (496)</h3>
     <p class="p-4 m-2 mb-4 bg-light rounded small text-muted">
-      Esta seção apresenta gráficos das análises de processamento de linguagem natural (PLN). Esta análise indica tendências os resultados das análises de sentimento obtidas das técnicas de processamento de linguagem natural (PLN) dos artigos. Barras laranjas indicam tendências negativas/neutras, enquanto as azuis indicam positivas. Para mais detalhes sobre a metodologia adotada, acesse <a href="https://github.com/LBS-UFMG/SimplificaSUS">https://github.com/LBS-UFMG/SimplificaSUS</a>.
+      Esta seção apresenta gráficos das análises de processamento de linguagem natural (PLN). Esta análise indica tendências os resultados das análises de sentimento obtidas das técnicas de processamento de linguagem natural (PLN) dos artigos. Barras vermelhas indicam tendências negativas/neutras, enquanto as azuis indicam positivas. Para mais detalhes sobre a metodologia adotada, acesse <a href="https://github.com/LBS-UFMG/SimplificaSUS">https://github.com/LBS-UFMG/SimplificaSUS</a>.
     </p>
     <p class="mt-2 text-center">
       <span style="background:red" class="p-1 px-3 m-2 rounded"> </span> Tendência desfavorável/neutro
       <span style="background:#1e90ff" class="p-1 px-3 m-2 rounded"> </span> Tendência favorável
     </p>
-    <canvas class="my-4 py-4 w-100" id="g8" width="900" height="1000"></canvas>
   </div>
+
+  <!-- grafico -->
+  <nav>
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+
+      <button class="nav-link active" id="tab1" data-bs-toggle="tab" data-bs-target="#pnl_tudo" role="tab">Tudo</button>
+
+      <button class="nav-link" id="tab2" data-bs-toggle="tab" data-bs-target="#pnl_sr" role="tab">Revisão sistemática</button>
+
+      <button class="nav-link" id="tab2" data-bs-toggle="tab" data-bs-target="#pnl_cr" role="tab">Relato de caso</button>
+      
+      <button class="nav-link" id="tab2" data-bs-toggle="tab" data-bs-target="#pnl_ct" role="tab">Ensaio clínico</button>
+
+      <button class="nav-link" id="tab2" data-bs-toggle="tab" data-bs-target="#pnl_co" role="tab">Coorte</button>
+
+      <button class="nav-link" id="tab2" data-bs-toggle="tab" data-bs-target="#pnl_ma" role="tab">Meta-análise</button>
+
+
+
+    </div>
+  </nav>
+  <!-- FIM ABA grafico -->
+
+  <!-- CONTÊINER DOS GRÁFICOS NLP-->
+  <div class="tab-content" id="nav-tabContent">
+
+    <div class="tab-pane fade show active" id="pnl_tudo" role="tabpanel" tabindex="0">
+      <div class="row">
+        <!-- grafico -->
+        <div class="col-12 my-2 p-4">
+          <canvas class="my-4 py-4 w-100" id="g9" width="900" height="700"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-pane fade" id="pnl_sr" role="tabpanel" tabindex="0">
+      <!-- grafico -->
+      <div class="row">
+        <div class="col-12 my-2 p-4">
+          <canvas class="my-4 py-4 w-100" id="g9_sr" width="900" height="300"></canvas>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="tab-pane fade" id="pnl_cr" role="tabpanel" tabindex="0">
+      <!-- grafico -->
+      <div class="row">
+        <div class="col-12 my-2 p-4">
+          <canvas class="my-4 py-4 w-100" id="g9_cr" width="900" height="300"></canvas>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="tab-pane fade" id="pnl_ct" role="tabpanel" tabindex="0">
+      <!-- grafico -->
+      <div class="row">
+        <div class="col-12 my-2 p-4">
+          <canvas class="my-4 py-4 w-100" id="g9_ct" width="900" height="500"></canvas>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="tab-pane fade" id="pnl_co" role="tabpanel" tabindex="0">
+      <!-- grafico -->
+      <div class="row">
+        <div class="col-12 my-2 p-4">
+          <canvas class="my-4 py-4 w-100" id="g9_co" width="900" height="300"></canvas>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="tab-pane fade" id="pnl_ma" role="tabpanel" tabindex="0">
+      <!-- grafico -->
+      <div class="row">
+        <h4>Meta-análise</h4>
+        <div class="col-12 my-2 p-4">
+          <canvas class="my-4 py-4 w-100" id="g9_ma" width="900" height="300"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- FIM CONTÊINER grafico pln -->
+
 </div>
 @endsection
