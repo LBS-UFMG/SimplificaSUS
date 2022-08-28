@@ -78,7 +78,7 @@
             <h6 class="card-subtitle mb-2 text-azul-claro" title="PLN: Processamento de Linguagem Natural"><b>PLN</b></h6>
           </div>
           <div class="col-md-6 col-12">
-            <p class="display-5 pt-3">72</p>
+            <p class="display-5 pt-3">496</p>
           </div>
         </div>
       </div>
@@ -248,7 +248,7 @@
 
   <!-- grafico -->
   <div class="col-12 my-2">
-    <h3 class="mb-2 ps-2 text-muted"><label class="badge bg-azul-escuro me-2">PLN</label>Análise do processamento de linguagem natural (72)</h3>
+    <h3 class="mb-2 ps-2 text-muted"><label class="badge bg-azul-escuro me-2">PLN</label>Análise do processamento de linguagem natural (496)</h3>
     <p class="p-4 m-2 mb-4 bg-light rounded small text-muted">
       Esta seção apresenta gráficos das análises de processamento de linguagem natural (PLN). Esta análise indica tendências os resultados das análises de sentimento obtidas das técnicas de processamento de linguagem natural (PLN) dos artigos. Barras laranjas indicam tendências negativas/neutras, enquanto as azuis indicam positivas. Para mais detalhes sobre a metodologia adotada, acesse <a href="https://github.com/LBS-UFMG/SimplificaSUS">https://github.com/LBS-UFMG/SimplificaSUS</a>.
     </p>
@@ -256,7 +256,7 @@
       <span style="background:red" class="p-1 px-3 m-2 rounded"> </span> Tendência desfavorável/neutro
       <span style="background:#1e90ff" class="p-1 px-3 m-2 rounded"> </span> Tendência favorável
     </p>
-    <canvas class="my-4 py-4 w-100" id="g8" width="900" height="450"></canvas>
+    <canvas class="my-4 py-4 w-100" id="g8" width="900" height="1000"></canvas>
   </div>
 </div>
 @endsection

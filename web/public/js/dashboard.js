@@ -416,31 +416,45 @@ const grafico15 = new Chart(onde15, {
 
 
 // gráfico 9 - PLN ----------------------------------------
-const dados_g9 = d3.csv('./dados/dados_graficos/covid_ouro/g9.csv')
+// const dados_g9 = d3.dsv(';','./dados/dados_graficos/covid_ouro/tudo/g9.csv')
 
-dados_g9.then(
-  (dados)=>{
-    console.log(dados)
-  }
-);
+// dados_g9.then(
+//   dados=>{
+//     dados.forEach(
+//       i=>{
+//         console.log(i)
+//       }
+//     );
+//   }
+// );
 
+const g9_labels = ['dexamethasone','vaccine','methylprednisolone','oxygen','ribavirin','tocilizumab','hydroxychloroquine','chloroquine','heparin','carfilzomib','zanamivir','indinavir','saquinavir','remdesivir','lopinavir','ritonavir','atazanavir','emetine','azithromycin','baricitinib','thalidomide','nitazoxanide','budesonide','albuterol','thiamine','epoprostenol','pentoxifylline','ivermectin','aspirin','kaletra','sitagliptin','famotidine','canrenone','bromhexine','l-glutamine','cetirizine','sofosbuvir','daclatasvir','argatroban','doxycycline','calcium','ocrelizumab','anakinra','lipase','meropenem','dipyridamole','colchicine','belatacept','prednisolone','naproxen','cyclosporine','nafamostat','sarilumab','nifedipine','amlodipine','aldosterone','ciclesonide','lidocaine','tacrolimus','cholecalciferol','clozapine','boceprevir','auranofin','didanosine','today','metformin','furosemide','oseltamivir','apixaban','alemtuzumab','siltuximab','nivolumab','ipilimumab','pembrolizumab','rituximab','memantine','fingolimod','warfarin','ruxolitinib','azathioprine','eculizumab','methotrexate','valrubicin','elbasvir','streptomycin','riboflavin','praziquantel','fluvoxamine','fondaparinux','histamine','hydrocortisone','zosyn','linezolid','bactrim','ganciclovir','darunavir','canakinumab','fedratinib','rivaroxaban','febuxostat','leflunomide','propofol','dexmedetomidine','ibuprofen','paracetamol','acitretin','etanercept','adalimumab','infliximab','ustekinumab','empagliflozin','telmisartan','linagliptin','ouabain'];
+
+const g9_pos = [5,37,6,16,7,35,62,21,4,1,1,1,1,22,4,2,2,1,19,3,1,3,1,1,1,1,1,5,1,2,1,5,1,1,1,1,1,1,1,2,2,1,6,1,1,1,2,1,4,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+
+const g9_neg = [7,40,11,28,4,60,113,37,10,0,0,0,0,27,7,7,0,0,38,2,1,0,0,1,0,0,0,8,0,0,0,2,0,0,0,0,1,1,1,7,4,1,11,0,2,1,2,0,2,0,5,1,6,0,0,0,1,0,2,4,1,1,1,1,3,5,1,5,1,1,2,1,1,1,2,1,2,1,8,1,3,5,1,1,1,1,1,1,1,1,1,2,2,2,1,3,2,1,4,1,1,1,2,1,1,4,2,2,2,2,1,1,1,1];
 
 const onde8 = document.getElementById('g8')
 const grafico8 = new Chart(onde8, {
   type: 'horizontalBar',
   data: {
     labels: 
-    ['hydroxychloroquine', 'tocilizumab', 'azithromycin', 'chloroquine', 'remdesivir', 'methylprednisolone', 'doxycycline', 'ribavirin', 'nitazoxanide', 'heparin', 'ivermectin', 'argatroban', 'anakinra', 'apixaban', 'baricitinib', 'colchicine', 'sitagliptin', 'leflunomide', 'ruxolitinib', 'sarilumab', 'alteplase', 'bivalirudin', 'propofol', 'ketamine', 'cisatracurium', 'fentanyl', 'meropenem', 'atazanavir', 'famotidine', 'dipyridamole', 'midazolam', 'metformin', 'dexamethasone', 'tenofovir', 'prednisolone', 'estradiol', 'ganciclovir', 'ibuprofen', 'ritonavir', 'oseltamivir', 'natalizumab', 'lopinavir', 'quercetin']
+    // ['hydroxychloroquine', 'tocilizumab', 'azithromycin', 'chloroquine', 'remdesivir', 'methylprednisolone', 'doxycycline', 'ribavirin', 'nitazoxanide', 'heparin', 'ivermectin', 'argatroban', 'anakinra', 'apixaban', 'baricitinib', 'colchicine', 'sitagliptin', 'leflunomide', 'ruxolitinib', 'sarilumab', 'alteplase', 'bivalirudin', 'propofol', 'ketamine', 'cisatracurium', 'fentanyl', 'meropenem', 'atazanavir', 'famotidine', 'dipyridamole', 'midazolam', 'metformin', 'dexamethasone', 'tenofovir', 'prednisolone', 'estradiol', 'ganciclovir', 'ibuprofen', 'ritonavir', 'oseltamivir', 'natalizumab', 'lopinavir', 'quercetin']
+    g9_labels
     ,
     datasets: [{
       stack: "Stack 0",
       data: 
-      [8, 7, 5, 4, 4, 3, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      // [8, 7, 5, 4, 4, 3, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      g9_pos,
       backgroundColor: cor1
     },
     {
       stack: "Stack 0",
-      data:[12, 4, 6, 3, 6, 3, 0, 0, 0, 6, 1, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 3, 1, 1, 1].map(i=>-i),
+      data:
+      // [12, 4, 6, 3, 6, 3, 0, 0, 0, 6, 1, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 3, 1, 1, 1]
+      g9_neg
+        .map(i=>-i),
       backgroundColor: cor3
     }
   ]
