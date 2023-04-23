@@ -1,5 +1,10 @@
 # Supplementary material - paper
 
+Supplementary material data is available in the "paper" directory.
+Files:
+- **data.xlsx:** contains the list of articles and the classification assigned by the NLP method and manual curation. I also included the sentence on which the manual classification was based.
+
+
 # Tool (description in Portuguese - BR)
 <img src="./dados/img/logo_h_color_1.svg">
 
