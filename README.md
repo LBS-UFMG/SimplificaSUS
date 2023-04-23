@@ -1,7 +1,10 @@
+# Supplementary material - paper
+
+# Tool (description in Portuguese - BR)
 <img src="./dados/img/logo_h_color_1.svg">
 
 **Autores:** Frederico Carvalho, Diego Mariano, Marcos Matos
-**Protótipo:** Disponível em: <a href="http://inovasus.alfahelix.com.br/">http://inovasus.alfahelix.com.br/</a>.
+**Protótipo:** Disponível em: <a href="https://simplificasus.com/">https://simplificasus.com/</a>.
 
 www.simplificasus.com
 
